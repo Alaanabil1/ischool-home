@@ -22,6 +22,11 @@
     border-radius: 1vw;
 }
 
+.row {
+    --bs-gutter-x: 0;
+    margin: 0;
+}
+
 body {
     width: 100%;
     overflow-x: hidden;
@@ -390,13 +395,14 @@ body {
 /* -------------------------------------------------------- section 02------------------------------------ */
 
 .section02 {
-    padding: 60px 0;
+    padding: 60px 10px;
 }
 
 .ournumbers-container {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
+    margin-bottom: 60px;
 }
 
 .ournumbers-container .ournumbers-item {
@@ -412,6 +418,12 @@ body {
     position: relative;
     overflow: hidden;
     transition: 300ms;
+}
+
+.ournumbers-container .ournumbers-item a {
+    color: #2c2c2c;
+    text-decoration: none;
+    font-weight: 500;
 }
 
 .ournumbers-container .ournumbers-item::after {
@@ -477,13 +489,172 @@ body {
 .joinischool-container h5 {
     color: #2c2c2c90;
     font-style: italic;
+    margin-bottom: 60px;
+}
+
+.carousel.slide .card img {
+    width: 18rem;
+}
+
+.carousel.slide .card {
+    padding: 0;
+}
+
+.owl-margin {
+    padding: 30px;
+    display: flex;
+    justify-content: center;
+    --bs-gutter-x: 0;
+    margin: 0;
+}
+
+.owl-carousel {
+    display: flex !important;
+    justify-content: center;
+}
+
+.owl-carousel .card {
+    margin: auto;
+}
+
+
+/* -------------------------------------------------------- section 03------------------------------------ */
+
+.row.section03 {
+    text-align: center;
+    padding: 20px;
+}
+
+.row.section03 .row {
+    flex-wrap: nowrap;
+}
+
+.row.section03 .row .col:nth-child(1) {
+    text-align: left;
+    margin-left: 120px;
+}
+
+.row.section03 .row .col h1 {
+    font-size: 40px;
+}
+
+.row.section03 b {
+    color: #fd7d00;
+}
+
+.row.section03 .row .col h3 {
+    margin-bottom: 30px;
+}
+
+.row.section03 .row .col li {
+    list-style: none;
+    font-size: 18px;
+    color: #2c2c2c90;
+    margin-bottom: 20px;
+}
+
+.swiper-slide h3,
+.swiper-slide h2 {
+    margin: 0 !important;
+    padding: 0 !important;
+    line-height: 35px;
+}
+
+.swiper-slide h2 {
+    font-size: 25px;
+}
+
+.swiper-slide h3 {
+    font-size: 15px;
+    line-height: 13px;
+    color: #2c2c2c80;
+}
+
+.swiper-slide p {
+    margin-top: 20px;
+    padding: 0 30px;
+}
+
+.swiper-slide {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 .15rem 1.75rem 0 rgba(58, 59, 69, .15);
+}
+
+.swiper {
+    width: 500px !important;
+}
+
+.card-row {
+    margin-top: 120px;
+    padding: 0 15%;
+}
+
+.row.section03 .card {
+    background: linear-gradient(270deg, #0D3D9B 13.45%, #1A56CD 71.85%);
+    padding: 10px 20px;
+}
+
+.row.section03 .card .card-body {
+    display: flex;
+}
+
+.row.section03 .card .card-body .text-body {
+    text-align: left;
+    color: white;
+    width: 60%;
+}
+
+.row.section03 .card .card-body .text-body h1 {
+    color: white;
+    font-size: 30px;
+}
+
+.row.section03 .card .card-body .text-body p {
+    color: white;
+    line-height: 30px;
+    margin-top: 15px;
+}
+
+.row.section03 .card .card-body .card-row-btn {
+    color: white;
+    border: 3px solid white;
+    height: 60px;
+    padding: 0 30px;
+    margin: auto;
+    transition: 300ms;
+}
+
+.row.section03 .card .card-body .card-row-btn:hover {
+    background-color: white;
+    color: #1955cc;
 }
 
 
 /* -------------------------------------------------------------------------------------
   ------------------------------------------------------------------------------------- */
 
+@media screen and (max-width: 1500px) {
+    .row.section03 .row .col:nth-child(1) {
+        text-align: left;
+        margin-left: 90px;
+    }
+    .card-row {
+        margin-top: 120px;
+        padding: 0 10%;
+    }
+}
+
 @media screen and (max-width: 1200px) {
+    .card-row {
+        margin-top: 120px;
+        padding: 0 5%;
+    }
+    .row.section03 .row .col:nth-child(1) {
+        text-align: left;
+        margin-left: 60px;
+    }
     .header img {
         height: 45px;
     }
@@ -560,7 +731,26 @@ body {
     }
 }
 
+@media screen and (max-width: 950px) {
+    .row.section03 .row {
+        display: flex;
+        flex-direction: column-reverse;
+        flex-wrap: wrap;
+    }
+    .row.section03 .row .col:nth-child(1) {
+        text-align: left;
+        margin: auto;
+        padding: 20px;
+    }
+    .swiper {
+        width: 100% !important;
+    }
+}
+
 @media screen and (max-width: 870px) {
+    .card-row {
+        display: none !important;
+    }
     .header img {
         height: 30px;
     }
@@ -682,7 +872,14 @@ body {
         margin: 0;
         font-size: 13px;
     }
+    .ournumbers-container {
+        margin-bottom: 30px;
+    }
     .section02 {
         padding: 30px 0;
+    }
+    .joinischool-container h5 {
+        padding: 0 10px;
+        margin-bottom: 30px;
     }
 }
