@@ -1,12 +1,12 @@
-$(".header .close-btn").click(function() {
-  $(".header .nav").animate({
+$(".leftmenu-mob .close-btn").click(function() {
+  $(".leftmenu-mob").animate({
           right: "-85%",
       },
       300
   );
 });
-$(".header .menu-btn").click(function() {
-  $(".header .nav").animate({
+$(".mob-header .menu-btn").click(function() {
+  $(".leftmenu-mob").animate({
           right: 0,
       },
       300
